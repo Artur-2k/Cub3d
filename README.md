@@ -24,19 +24,19 @@ It starts by parsing the map to ensure it follows the correct structure - valid 
 ### Dependencies
 
 - **Operating System**: Unix-based OS (Linux or macOS)
-- **Libraries**: libX11, libXext, and libm for rendering and mathematical computations.
+- **Libraries**: libX11, libXext, libbsd and libm for rendering and mathematical computations.
 
 #### Installation on Linux/macOS:
 
 Ensure you have the necessary dependencies installed before proceeding.
 
-- **Debian/Ubuntu**: `sudo apt install libx11-dev libxext-dev libbsd-dev libm-dev`
+- **Debian/Ubuntu**: ```sudo apt install libx11-dev libxext-dev libbsd-dev libm-dev```
 
 For MacOS you'll have to switch the minilibx distro on code/lib
 
 ### Installing
 
-1. **Clone the Repository**\
+1. **Clone the Repository**
 
 Download the project by running:
 
