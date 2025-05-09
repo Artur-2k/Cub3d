@@ -2,7 +2,6 @@
 
 
 // Converte estrutura com canais de cor separadas para um int
-// TODO: Talvez modificar para suportar transparencia
 int split_to_color(t_rgb color)
 {
     int result;
@@ -11,21 +10,8 @@ int split_to_color(t_rgb color)
     return result;
 }
 
-/* void DrawVertPixelLine(t_cub *head, int color, t_ray *ray, int x) //todo change whats recieved
-{
-    // Ceiling - pinta do inicio ate 1 pixel antes da parede
-    DrawLine(head->mlx, x, 0, x, ray->drawStart - 1, split_to_color(head->assets.ceil_color));
-
-    // Wall 
-    DrawLine(head->mlx, x, ray->drawStart, x, ray->drawEnd, color);
-    
-    // Floor - pinta a partir de 1 pixel depois da parede ate o limite da janela
-    DrawLine(head->mlx, x, ray->drawEnd + 1, x, HEIGHT - 1, split_to_color(head->assets.floor_color));
-} */
-
 void DrawTexturedVertLine(t_cub *head, t_ray *ray, int x)
 {
-    // TODO: CRIAR STRUCT
     void *texture;
     int texWidth, texHeight;
     
@@ -40,7 +26,7 @@ void DrawTexturedVertLine(t_cub *head, t_ray *ray, int x)
         texHeight = ray->DirY > 0 ? head->assets.so_height : head->assets.no_height;
     }
 
-    // WALL HIT POSITION - NAO ENTENDI DIREITO
+    // WALL HIT POSITION 
     double wallX = ray->side == 0 ? 
         head->player.posY + ray->perpWallDist * ray->DirY :
         head->player.posX + ray->perpWallDist * ray->DirX;
@@ -82,6 +68,5 @@ void DrawTexturedVertLine(t_cub *head, t_ray *ray, int x)
     }
 
     // Floor
-    DrawLine(head->mlx, x, ray->drawEnd + 1, x, HEIGHT - 1, 
-             split_to_color(head->assets.floor_color));
+    DrawLine(head->mlx, x, ray->drawEnd, x, HEIGHT, split_to_color(head->assets.floor_color));
 }

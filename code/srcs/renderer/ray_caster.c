@@ -110,15 +110,7 @@ int Raycaster(t_cub *head)
         CastRay(&ray, head->map, head);
         // Start and end position of the wall hit
         BuildRay(&head->player, &ray);
-
-        //todo side colors. CHANGE THIS
-       /* int color = 0x0000FF;
-        if (ray.side)
-            color = 0xFF0000; */
-        
-
         // Drawing every vertical line of pixels of the image
-        //DrawVertPixelLine(head, color, &ray, x);
         DrawTexturedVertLine(head, &ray, x);
     }
     

@@ -28,9 +28,8 @@
 #define FOV 0.66
 
 // ERROR CODES
-#define PARSE_ERROR 1
-//TODO
 #define PARSE_SUCCESS 0
+#define PARSE_ERROR 1
 #define ARG_ERROR 1
 #define FTYPE_ERROR 1
 #define FEMPTY_ERROR 1
@@ -221,7 +220,7 @@ int Raycaster(t_cub *head);
 // Draw utils
 void DrawLine(t_mlx_data mlx, int x1, int y1, int x2, int y2, int color);
 void PutPixelToImg(t_mlx_data mlx, int x, int y, int color);
-void DrawVertPixelLine(t_cub *head, int color, t_ray *ray, int x); //todo change whats recieved
+void DrawVertPixelLine(t_cub *head, int color, t_ray *ray, int x);
 void DrawTexturedVertLine(t_cub *head, t_ray *ray, int x);
 
 // hooks

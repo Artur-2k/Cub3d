@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_validation.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmelo-ca <dmelo-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: artuda-s <artuda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 15:08:31 by davi              #+#    #+#             */
-/*   Updated: 2025/01/09 16:42:56 by dmelo-ca         ###   ########.fr       */
+/*   Updated: 2025/03/31 17:05:38 by artuda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,12 +98,10 @@ uint8_t isColorRgbstring(char *str)
             i++;
         }
         
-        // TODO DAVI WTF IS THIS COMMENT BETTER PLSSSSS
         if ((nb_per_channel == 0 && channel != 0) || nb_per_channel > 3) //O Primeiro canal pode ser vazio se possuir virgula
             return (MWRONG_TEXTURE);
         
         // next channel?
-        //TODO consegues limpar isto?
         if (str[i] == ',')
         {
             nb_per_channel = 0;
